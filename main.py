@@ -1,6 +1,6 @@
 import questionary
 from counter import Counter
-from analyse import calculate_best_streak, calculate_worst_streak
+from analyse import calculate_longest_streak, calculate_shortest_streak, calculate_all_streaks, calculate_longest_streak_by_periodicity
 from db import get_db, get_habits_periodicity, get_habits, get_streak_counter
 
 def is_supported_terminal():

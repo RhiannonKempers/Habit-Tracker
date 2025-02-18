@@ -27,7 +27,7 @@ def calculate_longest_streak(db):
     return best_streak  # Return the habit with the best streak
 
 
-def calculate_worst_streak(db):
+def calculate_shortest_streak(db):
     """
     Calculates the habit with the worst (shortest) streak.
 

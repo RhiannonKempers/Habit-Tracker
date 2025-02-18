@@ -95,9 +95,9 @@ def cli():
                 habits = get_habits_periodicity(db, periodicity) #Retrieve habits with selected periodicity
                 print(f"Habits with {periodicity} periodicity:")
                 for habit in habits:
-                    print(habit) #Print each habit name
-            elif analysis_choice == "Worst habit":
-                habit = calculate_worst_streak(db) #Calculate the worst streak
+                    print(habit)
+            elif analysis_choice == "Shortest streak":
+                habit = calculate_shortest_streak(db)
                 if habit:
                     print(f"The worst habit is {habit.name} with a streak of {habit.count(db)}") #Display the worst habit
                 else:

@@ -1,5 +1,5 @@
 import pytest
-from analyse import calculate_best_streak, calculate_worst_streak
+from analyse import calculate_longest_streak, calculate_shortest_streak
 from counter import Counter
 from db import get_streak_counter, get_db
 

@@ -39,11 +39,13 @@ Use the arrow keys to select from the menu, press enter to select.
 - `example_data.py`: contains 4 weeks of data
 
 ## Analysis
-There are 4 analysis options:
+There are 6 analysis options:
 - List all habits
 - List all habits by periodicity
-- Worst habit
-- Best habit
+- Habit with the longest streak
+- Habit with the shortest streak
+- List all streaks
+- Longest streak by periodicty
 
 ## Tests
 Pytest is included in the requirements, so run the following command to test the app:

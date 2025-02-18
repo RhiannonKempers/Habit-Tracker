@@ -107,7 +107,27 @@ def cli():
                 if habit:
                     print(f"The best habit is {habit.name} with a streak of {habit.count(db)}") #Display the best habit
                 else:
-                    print("No habits found") #Inform user if no habits exist
+                    print("No habits found")
+            elif analysis_choice == "All streaks":
+                all_streaks = calculate_all_streaks(db)  # Retrieve all habit streaks
+                if all_streaks:
+                    print("All Habit Streaks:")
+                    for habit, streak in all_streaks.items():  # Iterate through habit streaks
+                        print(f"{habit}: {streak}")
+                else:
+                    print("No habits found.")
+            elif analysis_choice == "Longest streak by periodicity":
+                periodicity = questionary.select(
+                    "What periodicity would you like to see the longest streak for?",
+                    choices=["daily", "weekly", "monthly"]
+                ).ask()  # Get periodicity from user
+                longest_streak_habit = calculate_longest_streak_by_periodicity(db, periodicity)
+                if longest_streak_habit:
+                    print(
+                        f"The longest streak for {periodicity} habits is {longest_streak_habit.name} with a streak of {longest_streak_habit.count(db)}")
+                else:
+                    print(f"No {periodicity} habits found.")  # Inform user if no habits with periodicity exist
+
 
         elif choice == "Exit":
             print("Goodbye!") #Exit message

@@ -99,7 +99,7 @@ def cli():
             elif analysis_choice == "Shortest streak":
                 habit = calculate_shortest_streak(db)
                 if habit:
-                    print(f"The worst habit is {habit.name} with a streak of {habit.count(db)}") #Display the worst habit
+                    print(f"The shortest streak is {habit.name} with a streak of {habit.count(db)}")
                 else:
                     print("No habits found")
             elif analysis_choice == "Longest streak":

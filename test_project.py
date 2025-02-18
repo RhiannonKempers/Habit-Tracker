@@ -71,7 +71,7 @@ class TestHabitTracker:
         assert best_streak.count(self.db) == 2, "Best streak count should be 2"
 
         # Test the worst streak calculation
-        worst_streak = calculate_worst_streak(self.db)
+        worst_streak = calculate_shortest_streak(self.db)
         assert worst_streak.name == "test_habit_2", "Worst streak should be test_habit_2"
         assert worst_streak.count(self.db) == 1, "Worst streak count should be 1"
 

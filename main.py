@@ -84,7 +84,7 @@ def cli():
 
         elif choice == "Analyse":
             analysis_choice = questionary.select("What analysis would you like to do?",
-                                                 choices=["List all habits", "List habits by periodicity", "Worst habit", "Best habit", "Back"]).ask() #Present user with analysis options
+                                                 choices=["List all habits", "List habits by periodicity", "Shortest streak", "Longest streak", "All streaks", "Longest streak by periodicity", "Back"]).ask() #Present user with analysis options
             if analysis_choice == "List all habits":
                 habits = get_habits(db) #Retrieve all habits from the database
                 print("Habits:")

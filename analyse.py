@@ -3,7 +3,7 @@ from typing import Any
 from db import get_habits, get_streak_counter, get_habits_periodicity
 import sqlite3
 
-def calculate_best_streak(db):
+def calculate_longest_streak(db):
     """
     Calculates the habit with the best (longest) streak.
 

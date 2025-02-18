@@ -28,7 +28,7 @@ def cli():
         choice = questionary.select(
             "What do you want to do?",
             choices=["Add Habit", "Remove Habit", "Complete Habit", "See Streak", "Analyse", "Exit"]
-        ).ask() #Prompt the user to select an action
+        ).ask() 
 
         if choice == "Add Habit":
             name = questionary.text("What's the name of your counter?").ask() #Get habit name from user

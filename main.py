@@ -89,7 +89,7 @@ def cli():
                 habits = get_habits(db) #Retrieve all habits from the database
                 print("Habits:")
                 for habit in habits:
-                    print(habit) #Print each habit name
+                    print(habit)
             elif analysis_choice == "List habits by periodicity":
                 periodicity = questionary.select("What periodicity would you like to see?", choices=["daily", "weekly", "monthly"]).ask() #Get periodicity from user
                 habits = get_habits_periodicity(db, periodicity) #Retrieve habits with selected periodicity

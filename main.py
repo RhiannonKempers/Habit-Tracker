@@ -101,9 +101,9 @@ def cli():
                 if habit:
                     print(f"The worst habit is {habit.name} with a streak of {habit.count(db)}") #Display the worst habit
                 else:
-                    print("No habits found") #Inform user if no habits exist
-            elif analysis_choice == "Best habit":
-                habit = calculate_best_streak(db) #Calculate the best streak
+                    print("No habits found")
+            elif analysis_choice == "Longest streak":
+                habit = calculate_longest_streak(db)
                 if habit:
                     print(f"The best habit is {habit.name} with a streak of {habit.count(db)}") #Display the best habit
                 else:

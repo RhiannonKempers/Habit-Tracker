@@ -66,7 +66,7 @@ class TestHabitTracker:
         assert test_streak.count(self.db) == 2, "Streak count for habit1 should be 2"
 
         # Test the best streak calculation
-        best_streak = calculate_best_streak(self.db)
+        best_streak = calculate_longest_streak(self.db)
         assert best_streak.name == "test_habit_1", "Best streak should be test_habit_1"
         assert best_streak.count(self.db) == 2, "Best streak count should be 2"
 

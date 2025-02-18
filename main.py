@@ -130,8 +130,8 @@ def cli():
 
 
         elif choice == "Exit":
-            print("Goodbye!") #Exit message
-            break #Break out of the while loop
+            print("Goodbye!")
+            break
 
 if __name__ == '__main__':
     cli() #Execute the cli function if the script is run directly

@@ -71,7 +71,8 @@ class Counter:
             cur.execute('''DELETE FROM counter WHERE habit_id = ?''', (self.id,))
             cur.execute('''INSERT INTO counter (habit_id, increment_date) VALUES (?, ?)''', (self.id, increment_date))
 
-        cur.execute('''UPDATE tracker SET last_completed = ? WHERE habit_id = ?''', (increment_date, self.id))
+        cur.execute('''UPDATE tracker SET last_completed = ? WHERE id = ?''',
+                    (increment_date, self.id))
         db.commit()
         self.last_completed = increment_date
         print(f"Habit {self.name} (ID: {self.id}) completed successfully on {increment_date}!")
